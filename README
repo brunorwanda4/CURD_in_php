@@ -1,0 +1,47 @@
+# Student Registration System
+
+This PHP application allows you to manage student records by providing functionalities to register, update, and delete student information. It uses a MySQL database to store student records.
+
+## Features
+
+- **Register**: Add new students to the database.
+- **Update**: Modify existing student information.
+- **Delete**: Remove student records from the database.
+
+## Setup
+
+1. **Database Setup**:
+   - Create a MySQL database named `student_db`.
+   - Import the `students.sql` file provided in the `sql` directory to create the `students` table.
+
+2. **Database Configuration**:
+   - Update the `db.php` file with your MySQL database credentials.
+
+3. **Running the Application**:
+   - Start your web server (e.g., Apache) and MySQL server.
+   - Navigate to the project directory in your web server's document root.
+   - Open `index.php` in your web browser to view the student registration table.
+   - Use the registration form to add new students, and the update/delete links in the table to manage student records.
+
+## File Structure
+
+- `index.php`: Main page that displays the student registration table and handles registration form submissions.
+- `update.php`: Page for updating student records. Displays a form with pre-filled data for the selected student.
+- `delete.php`: Page for deleting student records. Deletes the selected student record from the database.
+- `db.php`: Contains the database connection code.
+- `style.css`: CSS file for styling the application.
+
+## Technologies Used
+
+- PHP
+- MySQL
+- HTML
+- CSS
+
+## Author
+
+Bruno Rwanda 
+
+---
+
+You can customize this README file with your specific project details, such as database credentials, file locations, and author information.
