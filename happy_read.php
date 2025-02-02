@@ -64,10 +64,10 @@
         $DB_Username = "root";
         $DB_Password = "";
         $DB="school_management";
-        $conn = mysqli_connect($DB_Server, $DB_Username, $DB_Password , $DB);
+        $happ_conn = mysqli_connect($DB_Server, $DB_Username, $DB_Password , $DB);
         // Fetch data from database
         $sql = "SELECT * FROM students";
-        $result = mysqli_query($conn, $sql);
+        $result = mysqli_query($happ_conn, $sql);
 
         if (mysqli_num_rows($result) > 0) {
             while($row = mysqli_fetch_assoc($result)) {
@@ -87,7 +87,7 @@
             echo "<tr><td colspan='6'>No data found</td></tr>";
         }
 
-        mysqli_close($conn);
+        mysqli_close($happ_conn);
         ?>
       </tbody>
     </table>

@@ -16,14 +16,14 @@
     $DB_Username = "root";
     $DB_Password = "";
     $DB="school_management";
-    $conn = mysqli_connect($DB_Server, $DB_Username, $DB_Password , $DB);
+    $happ_conn = mysqli_connect($DB_Server, $DB_Username, $DB_Password , $DB);
 
     if (isset($_GET['id'])) {
         $id = $_GET['id'];
 
         // Fetch student record from database
         $sql = "SELECT * FROM students WHERE id = $id";
-        $result = mysqli_query($conn, $sql);
+        $result = mysqli_query($happ_conn, $sql);
 
         if (mysqli_num_rows($result) > 0) {
             $row = mysqli_fetch_assoc($result);
@@ -72,14 +72,14 @@
         // Update student record in database
         $sql = "UPDATE students SET full_name='$fName', email='$email', age=$age, course='$course' WHERE id=$id";
 
-        if (mysqli_query($conn, $sql)) {
+        if (mysqli_query($happ_conn, $sql)) {
             echo "<script>alert('Record updated successfully'); window.location.href='happy_read.php';</script>";
             exit();
         } else {
-            echo "Error updating record: " . mysqli_error($conn);
+            echo "Error updating record: " . mysqli_error($happ_conn);
         }
     }
-    mysqli_close($conn);
+    mysqli_close($happ_conn);
     ?>
 </main>
 </body>
