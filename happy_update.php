@@ -15,7 +15,7 @@
     $DB_Server = "localhost";
     $DB_Username = "root";
     $DB_Password = "";
-    $DB="SOS";
+    $DB="school_management";
     $conn = mysqli_connect($DB_Server, $DB_Username, $DB_Password , $DB);
 
     if (isset($_GET['id'])) {
@@ -73,7 +73,7 @@
         $sql = "UPDATE students SET full_name='$fName', email='$email', age=$age, course='$course' WHERE id=$id";
 
         if (mysqli_query($conn, $sql)) {
-            echo "<script>alert('Record updated successfully'); window.location.href='read.php';</script>";
+            echo "<script>alert('Record updated successfully'); window.location.href='happy_read.php';</script>";
             exit();
         } else {
             echo "Error updating record: " . mysqli_error($conn);

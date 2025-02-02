@@ -3,7 +3,7 @@
 $DB_Server = "localhost";
 $DB_Username = "root";
 $DB_Password = "";
-$DB="SOS";
+$DB="school_management";
 $conn = mysqli_connect($DB_Server, $DB_Username, $DB_Password , $DB);
 
 if (isset($_GET['id'])) {
@@ -14,7 +14,7 @@ if (isset($_GET['id'])) {
 
     if (mysqli_query($conn, $sql)) {
         // Redirect back to table page with success message
-        echo "<script>alert('Record deleted successfully'); window.location.href='read.php';</script>";
+        echo "<script>alert('Record deleted successfully'); window.location.href='happy_read.php';</script>";
         exit();
     } else {
         echo "Error deleting record: " . mysqli_error($conn);

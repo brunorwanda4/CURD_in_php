@@ -41,10 +41,10 @@
   $DB_Server = "localhost";
   $DB_Username = "root";
   $DB_Password = "";
-  $DB="SOS";
-  $conn = mysqli_connect($DB_Server, $DB_Username, $DB_Password , $DB);
+  $DB="school_management";
+  $happy_conn = mysqli_connect($DB_Server, $DB_Username, $DB_Password , $DB);
   
-  if (!$conn) {
+  if (!$happy_conn) {
       die("Connection failed: " . mysqli_connect_error());
   }
 
@@ -57,14 +57,14 @@
       // Insert data into database
       $sql = "INSERT INTO students (full_name, email, age, course) VALUES ('$fName', '$email', $age, '$course')";
 
-      if (mysqli_query($conn, $sql)) {
-        echo "<script>alert('Record added successfully'); window.location.href='read.php';</script>";
+      if (mysqli_query($happy_conn, $sql)) {
+        echo "<script>alert('Record added successfully'); window.location.href='happy_read.php';</script>";
       } else {
-          echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+          echo "Error: " . $sql . "<br>" . mysqli_error($happy_conn);
       }
   }
 
-  mysqli_close($conn);
+  mysqli_close($happy_conn);
   ?>
 </main>
 </body>

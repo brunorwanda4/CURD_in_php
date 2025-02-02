@@ -63,7 +63,7 @@
         $DB_Server = "localhost";
         $DB_Username = "root";
         $DB_Password = "";
-        $DB="SOS";
+        $DB="school_management";
         $conn = mysqli_connect($DB_Server, $DB_Username, $DB_Password , $DB);
         // Fetch data from database
         $sql = "SELECT * FROM students";
@@ -78,8 +78,8 @@
                 echo "<td>".$row['age']."</td>";
                 echo "<td>".$row['course']."</td>";
                 echo "<td class='actions'>";
-                echo "<a style='background-color: #007bff;' href='update.php?id=".$row['id']."'>Update</a>";
-                echo "<a style='background-color:red;' href='delete.php?id=".$row['id']."'>Delete</a>";
+                echo "<a style='background-color: #007bff;' href='happy_update.php?id=".$row['id']."'>Update</a>";
+                echo "<a style='background-color:red;' href='happy_delete.php?id=".$row['id']."'>Delete</a>";
                 echo "</td>";
                 echo "</tr>";
             }

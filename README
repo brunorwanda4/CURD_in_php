@@ -26,9 +26,9 @@ This PHP application allows you to manage student records by providing functiona
 ## File Structure
 
 - `index.php`: Main page that displays the student registration table and handles registration form submissions.
-- `update.php`: Page for updating student records. Displays a form with pre-filled data for the selected student.
-- `delete.php`: Page for deleting student records. Deletes the selected student record from the database.
-- `db.php`: Contains the database connection code.
+- `happy_update.php`: Page for updating student records. Displays a form with pre-filled data for the selected student.
+- `happy_delete.php`: Page for deleting student records. Deletes the selected student record from the database.
+- `happy_db.php`: Contains the database connection code.
 - `style.css`: CSS file for styling the application.
 
 ## Technologies Used
